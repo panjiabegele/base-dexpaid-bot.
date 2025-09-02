@@ -1,0 +1,80 @@
+📂 Project: Base DexPaid Bot (Siap Upload)
+
+Berikut struktur project yang bisa langsung kamu upload ke GitHub:
+
+base-dexpaid-bot/
+├── base_dexpaid_bot.py   # file utama bot
+├── requirements.txt      # dependency
+├── Procfile              # instruksi untuk Railway
+└── .env.example          # contoh environment variables
+
+
+---
+
+1. base_dexpaid_bot.py
+
+👉 Ini isi file utama (sama seperti yang sudah aku buat sebelumnya):
+
+# file: base_dexpaid_bot.py
+
+# --- kode bot utama ada di sini ---
+# (isi sama persis dengan script yang sudah ada di canvas sebelumnya)
+
+> Catatan: Isi lengkap base_dexpaid_bot.py sudah ada, tinggal copy ke file ini.
+
+
+
+
+---
+
+2. requirements.txt
+
+aiogram
+aiohttp
+aiosqlite
+python-dotenv
+
+
+---
+
+3. Procfile
+
+worker: python base_dexpaid_bot.py
+
+
+---
+
+4. .env.example
+
+TELEGRAM_BOT_TOKEN=isi_token_bot_disini
+TELEGRAM_CHAT_ID=isi_chat_id_disini
+CHAIN_ID=base
+POLL_INTERVAL_SEC=20
+
+> ⚠️ Saat upload ke GitHub, jangan upload .env asli. File .env.example hanya contoh. Variabel asli nanti dimasukkan di Railway → menu Variables.
+
+
+
+
+---
+
+🚀 Cara Deploy ke Railway
+
+1. Upload folder ini ke GitHub (repo baru, misalnya base-dexpaid-bot).
+
+
+2. Buka Railway, login via GitHub.
+
+
+3. Klik New Project → Deploy from GitHub repo.
+
+
+4. Tambahkan Environment Variables sesuai .env.example.
+
+
+5. Railway akan otomatis jalanin bot sebagai worker.
+
+
+
+Bot siap kirim alert 24/7 tanpa Android/server pribadi 🎉
+
